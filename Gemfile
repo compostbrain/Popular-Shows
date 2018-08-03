@@ -35,8 +35,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'haml'
 
 group :development, :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '~> 2.16.1'
+  gem 'selenium-webdriver', '~> 3.8.0'
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper', '~> 1.1.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
@@ -54,7 +60,6 @@ group :development do
   gem 'guard-rspec'
   gem 'haml-rails'
   gem 'meta_request'
-  gem 'spring'
   gem 'spring-commands-rspec'
 end
 

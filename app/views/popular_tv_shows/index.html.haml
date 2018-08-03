@@ -1,1 +1,4 @@
 %h2 Popular TV Shows
+%ul
+  - @popular_tv_shows["results"].each do |show|
+    %li #{show["name"]}
